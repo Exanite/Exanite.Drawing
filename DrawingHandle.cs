@@ -19,8 +19,8 @@ namespace Exanite.Drawing
             private int lastPushIndex;
             private int currentSubmeshIndex;
 
-            private readonly List<Vector3> vertices = new List<Vector3>();
-            private readonly List<ushort> indices = new List<ushort>();
+            private readonly List<Vector3> vertices = new();
+            private readonly List<ushort> indices = new();
             private readonly Mesh mesh;
 
             private readonly DrawingService drawingService;
