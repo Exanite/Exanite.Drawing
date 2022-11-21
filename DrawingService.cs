@@ -1,11 +1,10 @@
-#if ODIN_INSPECTOR
-using Sirenix.OdinInspector;
-#endif
-
 using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
+#if ODIN_INSPECTOR
+using Sirenix.OdinInspector;
+#endif
 
 namespace Exanite.Drawing
 {
@@ -21,8 +20,8 @@ namespace Exanite.Drawing
         private CommandBuffer commandBuffer;
         private MaterialPropertyBlock propertyBlock;
 
-        private readonly List<RenderCommand> renderQueue = new List<RenderCommand>();
-        private readonly List<DrawingHandle> pooledHandles = new List<DrawingHandle>();
+        private readonly List<RenderCommand> renderQueue = new();
+        private readonly List<DrawingHandle> pooledHandles = new();
         private int currentHandleIndex;
 
         public event Action Rendering;

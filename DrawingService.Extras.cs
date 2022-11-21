@@ -1,11 +1,10 @@
+using UnityEngine;
 #if ODIN_INSPECTOR && UNITY_EDITOR
 using System.Collections.Generic;
 using Exanite.Core.Utilities;
 using Sirenix.OdinInspector;
 using UnityEditor;
 #endif
-
-using UnityEngine;
 
 namespace Exanite.Drawing
 {
@@ -54,15 +53,15 @@ namespace Exanite.Drawing
 
             var vertices = new List<Vector3>
             {
-                new Vector3(-1, -1, -1),
-                new Vector3(-1, -1, 1),
-                new Vector3(1, -1, 1),
-                new Vector3(1, -1, -1),
+                new(-1, -1, -1),
+                new(-1, -1, 1),
+                new(1, -1, 1),
+                new(1, -1, -1),
 
-                new Vector3(-1, 1, -1),
-                new Vector3(-1, 1, 1),
-                new Vector3(1, 1, 1),
-                new Vector3(1, 1, -1),
+                new(-1, 1, -1),
+                new(-1, 1, 1),
+                new(1, 1, 1),
+                new(1, 1, -1),
             };
 
             for (var i = 0; i < vertices.Count; i++)
