@@ -16,7 +16,14 @@ namespace Exanite.Drawing
             {
                 if ((renderingData.cameraData.cameraType | AllowedCameraTypes) == AllowedCameraTypes)
                 {
-                    Rendering?.Invoke(context, renderingData.cameraData.camera);
+                    try
+                    {
+                        Rendering?.Invoke(context, renderingData.cameraData.camera);
+                    }
+                    catch(Exception e)
+                    {
+                        Debug.LogError($"An exception was thrown during {nameof(DrawingServiceRenderFeature)}.{nameof(Rendering)} callback: {e}");
+                    }
                 }
             }
         }

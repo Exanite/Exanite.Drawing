@@ -101,7 +101,14 @@ namespace Exanite.Drawing
 
         private void OnRendering(ScriptableRenderContext context, Camera camera)
         {
-            Rendering?.Invoke();
+            try
+            {
+                Rendering?.Invoke();
+            }
+            catch(Exception e)
+            {
+                Debug.LogError($"An exception was thrown during {nameof(DrawingService)}.{nameof(Rendering)}: {e}");
+            }
 
             commandBuffer.Clear();
             commandBuffer.SetProjectionMatrix(camera.projectionMatrix);
