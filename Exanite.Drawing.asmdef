@@ -1,6 +1,5 @@
 {
     "name": "Exanite.Drawing",
-    "rootNamespace": "",
     "references": [
         "Exanite.Core",
         "Unity.RenderPipelines.Universal.Runtime"
