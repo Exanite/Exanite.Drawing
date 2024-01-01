@@ -1,6 +1,6 @@
 # Exanite.Drawing
 
-Unity Gizmos alternative that is also runtime compatible.
+Faster and more flexible replacement for Unity's Gizmos. Built on the Unity Universal Rendering Pipeline.
 
 Note: This package is intended for personal use. Things can change without warning.
 
